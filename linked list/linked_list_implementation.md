@@ -24,6 +24,7 @@
   while (temp1 -> link != NULL) {
     temp1 = temp1 -> link;
   }
+
   temp1 -> link = temp;
 
 ```
