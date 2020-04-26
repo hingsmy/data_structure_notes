@@ -1,39 +1,46 @@
 ### Linked list: Inserting a node at beginning
 
 ```c
-  #include<stdlib.h>
-  #include<stdio.h>
+  #include <stdlib.h>
+  #include <stdio.h>
 
-  struct Node {
+  struct Node
+  {
     int data;
-    struct Node* next;
-  }
-  void Insert(int x) {
-    Node* temp = (Node*)malloc(sizeof(struct Node));
-    temp -> data = x;
+    struct Node *next;
+  };
+
+  struct Node *head;
+
+  void Insert(int x)
+  {
+    struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
+    temp->data = x;
     temp->next = head;
     head = temp;
-  }
-  void Print() {
-    struct Node* temp = head;
-    while(temp != NULL) {
+  };
+  void Print()
+  {
+    struct Node *temp = head;
+    while (temp != NULL)
+    {
       printf("%d", temp->data);
       temp = temp->next;
     }
     printf("\n");
-  }
-
-  struct Node* head;
+  };
 
   void Insert(int x);
   void Print();
 
-  int main() {
+  int main()
+  {
     head = NULL; // empty list
     printf("How many numbers?\n");
     int n, i, x;
     scanf("%d", &n);
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
       printf("Enter the number \n");
       scanf("%d", &x);
       Insert(x);
