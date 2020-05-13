@@ -6,6 +6,8 @@
 1. Dereferencing
 1. Dynamic Allocation
 
+---
+
 - Accessing Heap
 - Accessing Resource
 - Parameter Passing
