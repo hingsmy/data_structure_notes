@@ -39,3 +39,5 @@ void B(int n)
   }
 }
 ```
+
+> detailed note on page 4.
