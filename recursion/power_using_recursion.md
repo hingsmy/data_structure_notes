@@ -33,3 +33,5 @@ int pow(int m, int n)
     return m * pow(m * m, (n - 1) / 2);
 }
 ```
+
+detail on page 7
