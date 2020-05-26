@@ -19,3 +19,34 @@ int e(int x, int n)
 ```
 
 details on page 8
+
+### Horner's rule
+
+```c
+double e(int x, int n)
+{
+  double s = 1;
+  int i;
+  double num = 1;
+  double den = 1;
+
+  for (i = 1; i <= n; i++)
+  {
+    num *= x;
+    den *= i;
+    s += num/den;
+  }
+  return s;
+}
+```
+
+```c
+double e(int x, int n)
+{
+  static double s;
+  if (n == 0)
+    return s;
+  s = 1 + x / n * s;
+  return e(x, n-1);
+}
+```
