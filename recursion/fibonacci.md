@@ -47,3 +47,5 @@ int fib(int n)
 }
 
 ```
+
+details on page 10
