@@ -134,11 +134,23 @@ void IMergeSort(int A[], int n)
     Merge(A, 0, p / 2 - 1, n);
 }
 
+void MergeSort(int A[], int l, int h)
+{
+  int mid;
+  if (l < h)
+  {
+    mid = (l + h) / 2;
+    MergeSort(A, l, mid);
+    MergeSort(A, mid + 1, h);
+    Merge(A, l, mid, h);
+  }
+}
+
 int main()
 {
-  int A[] = {11, 13, 7, 12, 16, 9, 4, 5, 10, 3, INT32_MAX}, n = 11, i;
+  int A[] = {11, 13, 7, 12, 16, 9, 4, 5, 10, 3}, n = 10, i;
 
-  IMergeSort(A, 11);
+  MergeSort(A, 0, n - 1);
 
   for (i = 0; i < 10; i++)
     printf("%d ", A[i]);
